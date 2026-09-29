@@ -2,8 +2,17 @@ import csv
 import os
 from pathlib import Path
 
+# Directory containing the Buttercup CSV file.
+# The converted Bitwarden CSV file will also be saved here.
+# Change "Escritorio" to another directory if needed.
 base = Path.home() / "Escritorio"
+
+# Name of the CSV file exported from Buttercup.
+# Change this if your input file has a different name.
 source = base / "pBMig"
+
+# Name of the CSV file to generate for Bitwarden.
+# Change this if you want a different output filename.
 target = base / "bitwarden_con_carpetas.csv"
 columns = ["folder", "favorite", "type", "name", "notes", "fields", "reprompt", "login_uri", "login_username", "login_password", "login_totp"]
 
